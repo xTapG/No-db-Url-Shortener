@@ -36,9 +36,10 @@ let geturl = () => {
 
 let getrandom = () => {
     let text = "";
+    let numberOfCharacters = Math.floor(Math.random()*2)+5;
     let possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-    for (let i = 0; i < 5; i++)
+    for (let i = 0; i < numberOfCharacters; i++)
         text += possible.charAt(Math.floor(Math.random() * possible.length));
     return text;
 };
@@ -111,7 +112,7 @@ let shorturl = () => {
     let protocol_ok = re.test(longurl);
     if (!protocol_ok) {
         document.getElementById("erbox").style.color = "red";
-        document.getElementById("erbox").innerHTML = "❌ Invalid URL";
+        document.getElementById("erbox").innerHTML = "âŒ Invalid URL";
     } else {
         document.getElementById("erbox").innerHTML = "";
         if (document.getElementById("custominput").value == "") {
@@ -121,11 +122,11 @@ let shorturl = () => {
         } else {
             if (cre.test(document.getElementById("custominput").value)) {
                     document.getElementById("erbox").style.color = "red";
-                    document.getElementById("erbox").innerHTML = "❌ Custom Addresses are still in developement and dont work";
+                    document.getElementById("erbox").innerHTML = "âŒ Custom Addresses are still in developement and dont work";
                     genhash();
             } else {
                 document.getElementById("erbox").style.color = "red";
-                document.getElementById("erbox").innerHTML = "❌ Invalid Custom URL! Use only Alphanumerics and underscore!";
+                document.getElementById("erbox").innerHTML = "âŒ Invalid Custom URL! Use only Alphanumerics and underscore!";
                 document.getElementById("custominput").placeholder = document.getElementById("custominput").value;
                 document.getElementById("custominput").value = "";
             }
