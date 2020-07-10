@@ -100,7 +100,7 @@ let send_request = (url) => {
     // console.log(address)
     pushJSON(address, longurl, shorturl);
 
-    document.getElementById('shortenedURL').value = window.location.href;
+    document.getElementById('shortenedURL').value = "http://ql.1x.net/${window.location.hash.substr(1)}";
     document.getElementById('sucess').innerHTML = "Short URL Copied to Clipboard!";
     copyer("shortenedURL");
 };
