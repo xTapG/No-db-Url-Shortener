@@ -122,11 +122,11 @@ let shorturl = () => {
         } else {
             if (cre.test(document.getElementById("custominput").value)) {
                     document.getElementById("erbox").style.color = "red";
-                    document.getElementById("erbox").innerHTML = "âŒ Custom Addresses are still in developement and dont work";
+                    document.getElementById("erbox").innerHTML = "❌ Custom Addresses are still in developement and dont work";
                     genhash();
             } else {
                 document.getElementById("erbox").style.color = "red";
-                document.getElementById("erbox").innerHTML = "âŒ Invalid Custom URL! Use only Alphanumerics and underscore!";
+                document.getElementById("erbox").innerHTML = "❌ Invalid Custom URL! Use only Alphanumerics and underscore!";
                 document.getElementById("custominput").placeholder = document.getElementById("custominput").value;
                 document.getElementById("custominput").value = "";
             }
