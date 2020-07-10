@@ -112,7 +112,7 @@ let shorturl = () => {
     let protocol_ok = re.test(longurl);
     if (!protocol_ok) {
         document.getElementById("erbox").style.color = "red";
-        document.getElementById("erbox").innerHTML = "âŒ Invalid URL";
+        document.getElementById("erbox").innerHTML = "❌ Invalid URL";
     } else {
         document.getElementById("erbox").innerHTML = "";
         if (document.getElementById("custominput").value == "") {
